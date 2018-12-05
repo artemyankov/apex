@@ -28,7 +28,7 @@ class Corpus(object):
         """Tokenizes a text file."""
         assert os.path.exists(path)
         # Add words to the dictionary
-        with open(path, 'r') as f:
+        with open(path, 'r', encoding='utf-8') as f:
             tokens = 0
             for line in f:
                 words = line.split() + ['<eos>']
